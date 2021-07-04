@@ -233,7 +233,7 @@ const movies = [
     {
       Title: "The Lord of the Rings: The Two Towers",
       Year: "2002",
-      imdbID: "tt0167261",
+      imdbID: "tt0167261",  
       Type: "movie",
       Poster:
         "https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
@@ -502,20 +502,15 @@ halfTree(3);
    *** 
   *****
 */
-// const tree = function(num){
-//     for(let i = 0; i < num; i++){
-//         let n = num;
-//         for(let j = 0; j <= n-1; j++){
-//             process.stdout.write("");
-//             for(let k = i; k >= 1; k--){
-//                 process.stdout.write("*");
-//             }
-//         }
-//         console.log(" ");
-//     }
-// }
-// console.log("\nEx 21:")
-// tree(3);
+const tree = function(height){
+    for (let i = 0; i < height; i++){
+        let stars = "*".repeat(2 * i +1)
+        let spacesBefore = " ".repeat(height - i - 1)
+        console.log(spacesBefore + stars)
+    }
+}
+console.log("\nEx 21:")
+tree(3);
 
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
